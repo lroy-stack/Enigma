@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Calathea';
+    src: url('../src/calathea-regular.ttf') format('truetype');
+    /* Asegúrate de proporcionar la ruta correcta a tu archivo de fuente .ttf */
+}
+
+body {
+    font-family: 'Calathea', sans-serif; /* Aplica la fuente Calathea al cuerpo de la página */
+}
