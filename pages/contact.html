@@ -132,20 +132,20 @@
           <h2 class="special-title-2 text-center">Deja tu mensaje</h2>
           <div class="row">
             <div class="col-md-7 contact-form">
-              <form>
+              <form action="send_email.php" method="POST">
                 <div class="form-row">
                   <div class="form-group col-md-6">
                     <label for="inputName">NOMBRE:</label>
-                    <input type="text" class="form-control" id="inputName" placeholder="Jesús Perez">
+                    <input type="text" class="form-control" id="Nombre" placeholder="Jesús Perez">
                   </div>
                   <div class="form-group col-md-6">
                     <label for="inputEmail">EMAIL:</label>
-                    <input type="email" class="form-control" id="inputEmail" placeholder="nombre@ejemplo.com">
+                    <input type="email" class="form-control" id="Email" placeholder="nombre@ejemplo.com">
                   </div>
                 </div>
                 <div class="form-group">
                   <label for="inputTextarea">MENSAJE:</label>
-                  <textarea class="form-control" id="inputTextarea" rows="7" placeholder="Escribe tu mensaje aquí.."></textarea>
+                  <textarea class="form-control" id="Mensaje" rows="7" placeholder="Escribe tu mensaje aquí.."></textarea>
                 </div>
                 <button type="submit" class="btn btn-light">ENVIAR</button>
               </form>
@@ -157,8 +157,8 @@
                   Enigma Cocina con Alma<br>
                   Calle Justicia 6A<br>
                   03710 Calpe, Alicante<br>
-                  <abbr title="Phone">T:</abbr> (+34) 672 79 60 06<br>
-                  <abbr title="Email">E:</abbr> isa@enigmaconalma.com
+                  <abbr title="Phone"></abbr> (+34) 672 79 60 06<br>
+                  <abbr title="Email"></abbr> isa@enigmaconalma.com
                 </address>
               </div>
               <div class="opening-hours">
