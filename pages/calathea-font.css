@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Calathea';
-    src: url('../src/calathea-regular.ttf') format('truetype');
+    src: url('calathea-regular.ttf') format('truetype');
     /* Asegúrate de proporcionar la ruta correcta a tu archivo de fuente .ttf */
 }
 
