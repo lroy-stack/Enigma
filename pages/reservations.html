@@ -1,10 +1,21 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-21V5ZJLCJ9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-21V5ZJLCJ9');
+</script>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Enigma Cocina con Alma</title>
+    <title>Reservas - Enigma</title>
+    <meta name="description" content="Enigma Cocina con Alma es un restaurante ubicado en Calpe que ofrece cenas inolvidables en el casco antiguo. Nuestra cocina de fusión combina la tradición con la innovación para ofrecer una experiencia culinaria única.">
+    <link rel="icon" href="enigma.ico" type="image/x-icon">
     <!-- Web app manifest -->
     <link rel='manifest' href='../manifest.json'>
     <!-- Font Awesome -->
@@ -117,39 +128,47 @@
     https://res.cloudinary.com/dmkfycwpf/image/upload/q_auto,f_auto,c_scale,w_2560/v1707987107/humo.enigma_wjuggg.jpg 2560w"
   src="https://res.cloudinary.com/dmkfycwpf/image/upload/v1707987107/humo.enigma_wjuggg.jpg"
   alt="Enigma Reservas"
-            class="reservations-form-bg">
-        <form action="https://formspree.io/f/xrgnrowk" method="post">
-            <div class="form-row">
-                <div class="form-group col-md-6">
-                    <label for="inputName">NOMBRE:</label>
-                    <input type="text" class="form-control" id="inputName" name="Nombre y Apellido" placeholder="Leroy Löwe">
-                </div>
-                <div class="form-group col-md-6">
-                    <label for="inputEmail">EMAIL:</label>
-                    <input type="email" class="form-control" id="inputEmail" name="Correo" placeholder="tunombre@ejemplo.com">
-                </div>
+          <div class="reservations-form-bg">
+    <form action="send_email.php" method="post">
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="inputName">NOMBRE:</label>
+                <input type="text" class="form-control" id="inputName" name="nombre" placeholder="Leroy Löwe" required>
             </div>
-            <div class="form-row">
-                <div class="form-group col-md-5">
-                    <label for="inputDate">FECHA:</label>
-                    <input type="date" class="form-control" id="Fecha" name="Fecha">
-                </div>
-                <div class="form-group col-md-2">
-                    <label for="inputNumber">PAX:</label>
-                    <input type="number" min="1" class="form-control" id="inputNumber" name="Personas" placeholder="1">
-                </div>
-                <div class="form-group col-md-5">
-                    <label for="inputPhone">TELEFONO:</label>
-                    <input type="tel" class="form-control" id="inputPhone" name="Contacto" placeholder="673245678">
-                </div>
+            <div class="form-group col-md-6">
+                <label for="inputEmail">EMAIL:</label>
+                <input type="email" class="form-control" id="inputEmail" name="correo" placeholder="tunombre@ejemplo.com" required>
             </div>
-            <div class="form-group">
-                <label for="inputTextarea">MENSAJE:</label>
-                <textarea class="form-control" id="inputTextarea" name="Mensaje" rows="7" placeholder="Detalles adicionales"></textarea>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <label for="inputDate">FECHA:</label>
+                <input type="date" class="form-control" id="Fecha" name="fecha" required>
             </div>
-            <button type="submit" class="btn btn-light">ENVIAR</button>
-        </form>
-    </div>
+            <div class="form-group col-md-2">
+                <label for="inputTime">HORA:</label>
+                <input type="time" class="form-control" id="inputTime" name="hora" required>
+            </div>
+            <div class="form-group col-md-2">
+                <label for="inputNumber">PAX:</label>
+                <input type="number" min="1" class="form-control" id="inputNumber" name="personas" placeholder="1" required>
+            </div>
+            <div class="form-group col-md-4">
+                <label for="inputPhone">TELEFONO:</label>
+                <input type="tel" class="form-control" id="inputPhone" name="telefono" placeholder="+12 345 67 89 00" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputTextarea">MENSAJE:</label>
+            <textarea class="form-control" id="inputTextarea" name="mensaje" rows="7" placeholder="Detalles adicionales" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-light">ENVIAR</button>
+    </form>
+</div>
+
+
+
+
     
       
 
@@ -219,5 +238,7 @@
     </script>
     <script src="../js/site.js"></script>
     <script src="../js/reservations-animations.js"></script>
+    
+  
   </body>
 </html>

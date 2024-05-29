@@ -60,7 +60,7 @@ a, a:hover {
   margin: 0 auto;
   width: 40px;
   height: 40px;
-  background-color: #007bff;
+  background-color: #095d76;
   transition: all 0.3s ease-in-out;
   opacity: 0.5;
   text-align: center;
@@ -68,7 +68,7 @@ a, a:hover {
 }
 
 .back-to-top:hover {
-  background-color: #0069d9;
+  background-color: #08627d;
   opacity: 1;
 }
 
@@ -359,9 +359,9 @@ a, a:hover {
 }
 
 .nav-social i {
-  font-size: 20px;
+  font-size: 25px;
   transition: all 0.3s ease-in-out;
-  color: rgba(0, 0, 0, .5);
+  color: rgba(6, 71, 79, 0.5);
 }
 
 .nav-social i:hover {

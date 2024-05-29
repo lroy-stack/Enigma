@@ -1,28 +1,44 @@
 <?php
+// Mostrar errores de PHP para depuración
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $nombre = strip_tags(trim($_POST["Nombre"]));
-    $email = filter_var(trim($_POST["Email"]), FILTER_SANITIZE_EMAIL);
-    $mensaje = trim($_POST["Mensaje"]);
+    // Recuperar y sanear los datos del formulario
+    $nombre = htmlspecialchars($_POST['nombre']);
+    $correo = htmlspecialchars($_POST['correo']);
+    $fecha = htmlspecialchars($_POST['fecha']);
+    $hora = htmlspecialchars($_POST['hora']);
+    $personas = htmlspecialchars($_POST['personas']);
+    $telefono = htmlspecialchars($_POST['telefono']);
+    $mensaje = htmlspecialchars($_POST['mensaje']);
 
-    if (empty($nombre) OR empty($mensaje) OR !filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        echo "Oops! Hubo un problema con tu envío. Por favor completa el formulario y prueba de nuevo.";
-        exit;
-    }
+    // Dirección de correo electrónico a la que se enviará el formulario
+    $to = "isa@enigmaconalma.com";
+    $subject = "Nueva reserva recibida";
 
-    $recipient = "isa@enigmaconalma.com";
-    $subject = "Nuevo mensaje de contacto de $nombre";
-    $email_content = "Nombre: $nombre\n";
-    $email_content .= "Email: $email\n\n";
-    $email_content .= "Mensaje:\n$mensaje\n";
+    // Crear el contenido del correo electrónico
+    $body = "Nombre: $nombre\n";
+    $body .= "Correo: $correo\n";
+    $body .= "Fecha: $fecha\n";
+    $body .= "Hora: $hora\n";
+    $body .= "Personas: $personas\n";
+    $body .= "Teléfono: $telefono\n";
+    $body .= "Mensaje: $mensaje\n";
 
-    $email_headers = "From: $nombre <$email>";
+    // Cabeceras del correo
+    $headers = "From: $correo" . "\r\n" .
+               "Reply-To: $correo" . "\r\n" .
+               "X-Mailer: PHP/" . phpversion();
 
-    if (mail($recipient, $subject, $email_content, $email_headers)) {
-        echo "¡Gracias! Tu mensaje ha sido enviado.";
+    // Enviar el correo
+    if (mail($to, $subject, $body, $headers)) {
+        echo "El mensaje se ha enviado correctamente.";
     } else {
-        echo "Oops! Algo salió mal y no pudimos enviar tu mensaje.";
+        echo "Hubo un error al enviar el mensaje. Por favor, inténtelo de nuevo.";
     }
 } else {
-    echo "¡Oops! Algo salió mal y no pudimos procesar tu solicitud.";
+    echo "Método de solicitud no soportado.";
 }
 ?>
