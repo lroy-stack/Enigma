@@ -1,73 +1,51 @@
-# 🍽️ Enigma Restaurant — Official Website
+# Enigma — my first hand-made website
 
-**[ES]** Sitio web oficial del restaurante Enigma en Calpe, España. Plataforma digital completa con menú interactivo, galería fotográfica, sistema de reservas y soporte PWA.
+**Live demo:** https://lroy-stack.github.io/Enigma/
 
-**[EN]** Official website for Enigma restaurant in Calpe, Spain. Full digital platform featuring an interactive menu, animated gallery, reservation system, and PWA support.
+This is the first website I built and delivered for a real client: the Enigma restaurant in Calpe (Spain), in 2024.
+It predates AI coding tools: I adapted the free Grecko Bootstrap template by hand (MIT, © 2019 Marios Sofokleous,
+see `LICENSE`) and wrote the restaurant's pages, menu, gallery and animations myself. It stays public as the starting
+point of my work as a developer.
+
+## What it is
+
+A single-page restaurant site:
+
+- Digital menu for food and drinks, with custom SVG icons.
+- Photo gallery with lazy loading and scroll animations.
+- Booking form.
+- Installable as a PWA (`manifest.json`).
+- Mobile-first layout.
+
+## Built with
+
+HTML5, CSS3 with Bootstrap and Animate.css, vanilla JavaScript (one animation module per section), a custom
+typeface (Calathea) and Grunt for the production build.
+
+## Run it locally
+
+```bash
+git clone https://github.com/lroy-stack/Enigma.git
+cd Enigma
+npx serve .
+```
+
+## Layout
+
+```
+index.html      single page
+css/            site styles and Bootstrap
+js/             site logic and per-section animations
+media/          brand assets, menu icons and photos
+manifest.json   PWA manifest
+```
+
+## Related
+
+- [`enigma.rest`](https://github.com/lroy-stack/enigma.rest): the first working copy, with a Grunt build pipeline.
 
 ---
 
-## ✨ Features / Características
-
-- 🍷 **Interactive digital menu** — Full drinks & food catalog with custom SVG icons
-- - 📸 **Animated gallery** — Photo gallery with lazy loading and scroll animations
-  - - 📅 **Reservation system** — Booking form with contact integration
-    - - 📱 **PWA ready** — Installable as a progressive web app (manifest.json)
-      - - 🎨 **Custom animations** — Modular JS animation system per section
-        - - 🌐 **Responsive design** — Mobile-first layout with Bootstrap
-         
-          - ---
-
-          ## 🛠️ Tech Stack
-
-          | Layer | Technology |
-          |-------|-----------|
-          | Markup | HTML5 |
-          | Styles | CSS3 · Bootstrap · Animate.css |
-          | Scripts | Vanilla JavaScript (ES6+) |
-          | Fonts | Calathea (custom typeface) |
-          | Build | Grunt |
-          | Assets | Custom SVG icon system |
-
-          ---
-
-          ## 📁 Project Structure / Estructura
-
-          ```
-          Enigma/
-          ├── index.html              # Main entry point
-          ├── css/
-          │   ├── main.css            # Custom styles
-          │   └── bootstrap.css       # Bootstrap framework
-          ├── js/
-          │   ├── site.js             # Core logic
-          │   ├── menu-animations.js
-          │   ├── gallery-animations.js
-          │   └── ...                 # Per-section animation modules
-          ├── media/
-          │   ├── brand/              # Logos SVG + PNG
-          │   └── menu/               # Menu icons & food images
-          └── manifest.json           # PWA manifest
-          ```
-
-          ---
-
-          ## 🚀 Getting Started / Instalación
-
-          ```bash
-          git clone https://github.com/lroy-stack/Enigma.git
-          cd Enigma
-          open index.html
-          # or use a local server:
-          npx serve .
-          ```
-
-          ---
-
-          ## 👨‍💻 Author
-
-          **Leroy** · [lroy-stack](https://github.com/lroy-stack)
-          Full-stack developer specialized in hospitality digital solutions · Calpe, España 🇪🇸
-
-          ---
-
-          *Part of Proyecto Enigma — complete digital transformation for restaurant management.*
+Versión en español: es la primera web que hice y entregué para un cliente real, el restaurante Enigma de Calpe, en
+2024, antes de las herramientas de IA: partí de la plantilla libre Grecko (MIT) y la adapté a mano. Puedes verla en
+https://lroy-stack.github.io/Enigma/.
